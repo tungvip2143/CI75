@@ -1,0 +1,73 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player__wrapper {
+  border: 1px #a8a6a6 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 24px 24px 24px 0;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+}
+.player__wrapper p:nth-child(3) {
+  color: red;
+  font-weight: bold;
+}
+.player__delerte-btn {
+  color: white;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  height: 16px;
+  width: 16px;
+  line-height: 16px;
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 100;
+  transition: all 0.5s;
+}
+.player__delerte-btn:hover {
+  color: aqua;
+}
+.players__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 10px 16px;
+  background-color: #575656;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.player__avatar {
+  display: block;
+}
+
+.player__avatar img {
+  object-fit: cover;
+  height: 200px;
+  width: 300px;
+  padding: -24px;
+}
