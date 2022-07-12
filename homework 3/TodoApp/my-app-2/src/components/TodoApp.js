@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Todos from "./Todos";
 import Header from "../components/Header";
 import AddTodo from "./AddTodo";
+import { v4 as uuidv4 } from "uuid";
 
 //khai báo thư viện axios
 import axios from "axios";
@@ -38,6 +39,7 @@ function TodoApp() {
     const todoData = {
       title: title,
       completed: false,
+      id: uuidv4(),
     };
     axios
       .post("https://jsonplaceholder.typicode.com/todos", todoData)
@@ -52,7 +54,7 @@ function TodoApp() {
   useEffect(() => {
     const config = {
       params: {
-        _limit: 5,
+        _limit: 0,
       },
     };
     // tạo GET request để lấy danh sách todos
